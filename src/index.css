@@ -1,0 +1,37 @@
+/* Weather icon filter for dark mode */
+.weather-icon {
+    transition: filter 0.3s;
+}
+.dark .weather-icon {
+    filter: brightness(0.8) invert(0.85);
+}
+@import "tailwindcss";
+.light {
+    --bg-color:  linear-gradient(135deg, #fbc2eb, #a6c1ee);
+
+    --text-color:  #111827;
+    --card-bg-color: #4a90e2;
+    --input-bg: #fff;
+    --input-text: #222;
+    --input-placeholder: #888;
+    --card-shadow: 0 4px 24px 0 rgba(0,0,0,0.09);
+    --accent: #0055ff;
+    --card-border: #e0e0e0;
+}
+.dark {
+    --bg-color:  linear-gradient(135deg, #111827, #1f2937, #000000);
+    --text-color: #black;
+    --card-bg-color: #0055ff;
+    --input-bg: #23272f;
+    --input-text: #f0f0f0;
+    --input-placeholder: #aaa;
+    --card-shadow: 0 4px 24px 0  rgb(0, 153, 255,0.32);
+    --accent: #4a90e2;
+    --card-border: #23272f;
+}
+
+body, html, #root {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
